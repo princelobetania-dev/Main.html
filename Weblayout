@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDIHS - Santo Domingo Integrated High School</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* Light Blue Background */
+        }
+        header {
+            background-color: #ADD8E6; /* Light Blue Header */
+            color: #000;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            background-color: #800080; /* Purple Navigation Bar */
+            color: white;
+            padding: 0.5em 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            display: block;
+        }
+        nav a:hover {
+            background-color: #D8BFD8; /* Lavender Hover Effect */
+            color: black;
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+        .sidebar {
+            width: 30%;
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar a {
+            display: block;
+            padding: 50px 16px;
+            text-decoration: none;
+            color: lightblue;
+        }
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .content {
+            width: 80%;
+            padding: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #eee;
+        }
+        #introduction {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SDIHS</h1>
+        <p>Santo Domingo Integrated High School</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="compe.html">Home</a></li>
+            <li><a href="yess.html">First Quarter</a></li>
+            <li><a href="doc1.html">Second Quarter</a></li>
+            <li><a href="https://www.facebook.com/prince.lobetania?mibextid=ZbWKwL">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="e-portforlio 1.html" onclick="showContent('schoolProfile')">School Profile</a></li>
+                <li><a href="#" onclick="showContent('sdis')">SHS</a></li>
+                <li><a href="#" onclick="showContent('jhs')">JHS</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div id="introduction">
+                <h2>Welcome to SDIHS</h2>
+                <p>Explore our school's profile, Senior High School (SHS) and Junior High School (JHS) programs. Click on the links in the sidebar to view more details.</p>
+            </div>
+            <div id="schoolProfile" style="display: none;">
+                <h2>VISION</h2>
+                <p>We dream of Filipinos who passionately love their country and whose values and competencies enable them to realize their full potential and contribute meaningfully to building the nation.
+                As a learner-centered public institution, the Department of Education continuously improves itself to better serve its stakeholders</p>
+                <h2>MISSION</h2>
+                <p>We dream of Filipinos who passionately love their country and whose competencies and values enable them to realize their full potential and contribute meaningfully to building the nation.
+                As a learner-centered public institution, the Department of Education continuously improves itself to better service its stakeholders</p>
+                <h2>CORE-VALUE</h2>
+                <p>Maka-diyos</p>
+                <p>Maka-tao</p>
+                <p>Makakalikasan</p>
+                <p>Makabansa</p>
+            </div>
+            <div id="sdis" style="display: none;">
+                <h2>SHS</h2>
+                <p>Content for SHS will go here.</p>
+            </div>
+            <div id="jhs" style="display: none;">
+                <h2>JHS</h2>
+                <p>Content for JHS will go here.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>juandelacruz@gmail.com | 09123456789</p>
+    </footer>
+
+    <script>
+        function showContent(contentId) {
+            // Hide all content divs including the introduction
+            var contents = document.querySelectorAll('.content > div');
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].style.display = 'none';
+            }
+            // Show the selected content
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
